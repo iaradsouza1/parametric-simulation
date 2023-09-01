@@ -1,10 +1,10 @@
-# Avaliação de estimadores de máxima verossimilhança para os parâmetros de escala e forma da distribuição de Pareto generalizada
+# Evaluation of maximum likelihood estimators for the generalized Pareto distribution (GPD) parameters
 
-Neste trabalho, busca-se obter estimativas de MV dos parâmetros de escala e forma, $\sigma$ e $\xi$, respectivamente, da GPD, por meio de simulação de Monte Carlo. Buscamos ainda corrigir estas estimativas utilizando a amostragem pelo método *bootstrap*.
+In this work, we seek to obtain MLE from the scale and shape parameters, $\sigma$ and $\xi$, respectively, from GPD, by means of Monte Carlo simulation. Also, we seek to correct these estimates using the *bootstrap* method.
 
-Os estimadores de MV são viesados em relação ao verdadeiro valor do parâmetros, sendo portanto influenciados pelo tamanho da amostra. Diferentes estratégias podem ser utilizadas para verificar as caracteristicas de um estimador. Simulações de Monte Carlo são úteis pois estas geram uma distribuição empírica do estimador, permitindo a avaliação do viés, variância e erro quadrático médio deste em relação a um valor conhecido do parâmetro. Outras técnicas, como a amostragem por *bootstrap*, podem ser empregadas em conjunto com o processo de simulação de Monte Carlo para a diminuição do viés do estimador.
+The MLE are compared to the parameters true value, being therefore influenced by the size of the sample. Different strategies can be used to verify the characteristics of an estimator. Monte Carlo simulations are useful because they generate an empirical distribution of the estimator, allowing the evaluation of bias, variance, and mean square error in comparison to the parameter value. Other techniques, such as bootstrap sampling, can be used with the Monte Carlo simulation process to decrease the estimator's range.
 
-A GPD é definida por pelos parâmetros de escala ($\sigma$) e de forma ($\xi$), com $\sigma>0$ e $-\infty <\xi< \infty$. Se $X \sim GPD(\sigma, \xi)$, sua função de distribuição acumulada é:
+The GPD is defined by the scale ($\sigma$) and shape ($\xi$) parameters, with $\sigma>0$ and $-\infty <\xi< \infty$. If $X \sim GPD(\sigma, \xi)$, its cumulative distribution function is:
 
 ```math
 \begin{equation*}
@@ -15,16 +15,16 @@ A GPD é definida por pelos parâmetros de escala ($\sigma$) e de forma ($\xi$),
     \end{cases}       
 \end{equation*}
 ```
-com suporte $x>0$ para $\xi \le 0$ e $0 < x < \frac{\sigma}{\xi}$ para $\xi>0$. Além disso, 
+with support of $x>0$ for $\xi \le 0$ and $0 < x < \frac{\sigma}{\xi}$ for $\xi>0$. Additionally, 
 
 ```math
 \begin{equation*}
-  E(X) = \frac{\sigma}{1-\xi} \text{, para $\xi < 1$}
+  E(X) = \frac{\sigma}{1-\xi} \text{, for $\xi < 1$}
 \end{equation*}
 ```
 
 ```math
 \begin{equation*}
-  Var(X) = \frac{\sigma^2}{(1-\xi)^2(1-2\xi)} \text{, para $\xi < 1/2$}
+  Var(X) = \frac{\sigma^2}{(1-\xi)^2(1-2\xi)} \text{, for $\xi < 1/2$}
 \end{equation*}
 ```
